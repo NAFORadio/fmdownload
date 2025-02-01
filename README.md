@@ -54,6 +54,7 @@ The script will:
 ## Output
 
 Downloaded files will be saved to the `FM_manuals` directory in your current working directory.
+1/31/25 - Added https://www.cia.gov/static/5c875f3ec660e092cf893f60b4a288df/SimpleSabotage.pdf to the downloads. 
 
 ## Error Handling
 
