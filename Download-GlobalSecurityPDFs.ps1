@@ -48,6 +48,7 @@ class PDFDownloader:
     def get_pdf_links(self):
         try:
             print("Fetching PDF links...")
+            # First get PDFs from the base URL
             response = self.session.get(self.base_url, headers=self.headers)
             response.raise_for_status()
             
@@ -62,6 +63,12 @@ class PDFDownloader:
                         'url': full_url,
                         'name': os.path.basename(href)
                     })
+            
+            # Add the Simple Sabotage manual
+            pdf_links.append({
+                'url': 'https://www.cia.gov/static/5c875f3ec660e092cf893f60b4a288df/SimpleSabotage.pdf',
+                'name': 'SimpleSabotage.pdf'
+            })
             
             print(f"Found {len(pdf_links)} PDF files")
             return pdf_links
